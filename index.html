@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>שבת בבוקר</title>
+  <meta name="author" content="Hagar Shilo">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://use.fontawesome.com/8f61b97be3.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Suez+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+<body>
+  <div class="center">
+    <h1>איזו דמות את/ה מהשיר ״שבת בבוקר״?</h1>
+  </div>
+
+<div class="center center-right">
+  <h2 id="test_status"></h2>
+  <div id="test"></div>
+
+</div>
+
+
+  <div class="center">
+    <div id="question_div">
+      <ul>
+        <li>Question</li>
+        <li>Answer 1</li>
+        <li>Answer 2</li>
+        <li>Answer 3</li>
+        <li>Answer 4</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="center content" id="questions">
+    <p id="question">מה התשובה?</p>
+    <form id="answers">
+      <input type="radio" name="question" value="a" id="answer1button">
+      <label id="answer1" for="answer1button">תשובה א</label><br/>
+      <input type="radio" name="question" value="b" id="answer2button">
+      <label id="answer2" for="answer2button">תשובה ב</label><br/>
+      <input type="radio" name="question" value="c" id="answer3button">
+      <label id="answer3" for="answer3button">תשובה ג</label><br/>
+      <input type="radio" name="question" value="d" id="answer4button">
+      <label id="answer4" for="answer4button">תשובה ד</label><br/>
+    </form>
+    <button class="btn btn-play" id="left">▶</button>
+    <button class="btn btn-play" id="right">◀</button>
+  </div>
+  <div class="center" id="result"></div>
+  <div class="center icons">
+    <div class="icon-holder">
+      <div class="contact">
+        <p class="contact-text">CONTACT / FOLLOW</p>
+        <a target="_blank" href="//il.linkedin.com/in/hagar-shilo-04651511b"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+        <a target="_blank" href="//github.com/strayblues"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
+        <a href="mailto:strayblues@gmail.com"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
