@@ -53,7 +53,6 @@ function renderQuestion(){
   test.innerHTML += "<input type='radio' name='choices' value='B'>"+choiceB+"<br>";
   test.innerHTML += "<input type='radio' name='choices' value='C'>"+choiceC+"<br>";
   test.innerHTML += "<input type='radio' name='choices' value='D'>"+choiceD+"<br><br>";
-  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
 }
 
 function checkAnswer(){
