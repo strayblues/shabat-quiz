@@ -62,39 +62,4 @@ function checkAnswer(){
 
 window.addEventListener("load", renderQuestion, false);
 
-
-
-/*
-
-  question_data = "";
-  $.getJSON("data.json", function(data) {
-    $.each(data, function(key, value) {
-      question_data += '<ul>';
-      question_data += '<li>' + value.question + '</li>';
-      question_data += '<li>' + value.answers[0] + '</li>';
-      question_data += '<li>' + value.answers[1] + '</li>';
-      question_data += '<li>' + value.answers[2] + '</li>';
-      question_data += '<li>' + value.answers[3] + '</li>';
-      question_data += '</ul>';
-    });
-    $('#question_div').push(question_data);
-  });
-
-console.log(question_data);
-
-
-$.getJSON("data.json", function(data) {
-    for (var i = 0; i < json.length; i++) {
-      content = $('<div/>');
-      content.push("<p id='question'>" + json[i].question + "</p>");
-      content.push("<li>" + json[i].answers[0] + "</li>");
-      content.push("<li>" + json[i].answers[1] + "</li>");
-      content.push("<li>" + json[i].answers[2] + "</li>");
-      content.push("<li>" + json[i].answers[3] + "</li>");
-
-      $('#questions').push(content);
-  }
-});
-
-*/
 }); // /END OF MAIN FUNCTION
