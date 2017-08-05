@@ -1,10 +1,11 @@
-var position=0, test, test_status, content, current_question, choiceA, choiceB, choiceC, choiceD;
+var position=0, test, test_status, current_question, choice, choices,
+    choiceA, choiceB, choiceC, choiceD, userAnswers=[];
 var questions = [
   [
-    "כמה בלון יקנו לך?",
+    "להערכתך, כמה בלון יקנו לך?",
     "המון",
     "לא המון",
-    "בלון הוא שם עצם ספיר, נא לתקן את נוסח השאלה",
+    "בלון הוא שם עצם ספיר, יש לתקן את נוסח השאלה",
     "מיאו"
   ],
   [
@@ -30,8 +31,6 @@ var questions = [
   ]
 ];
 
-$(document).ready(function() {
-
 function _(x){
   return document.getElementById(x);
 }
@@ -44,21 +43,34 @@ function renderQuestion(){
   choiceB = questions[position][2];
   choiceC = questions[position][3];
   choiceD = questions[position][4];
-  test.innerHTML = "<h3>"+current_question+"</h3>";
-  test.innerHTML += "<input type='radio' name='choices' value='A'>"+choiceA+"<br>";
-  test.innerHTML += "<input type='radio' name='choices' value='B'>"+choiceB+"<br>";
-  test.innerHTML += "<input type='radio' name='choices' value='C'>"+choiceC+"<br>";
-  test.innerHTML += "<input type='radio' name='choices' value='D'>"+choiceD+"<br><br>";
+  test.innerHTML = "<h2>"+current_question+"</h2>";
+  test.innerHTML += "<h4><input type='radio' name='choices' value='A'>"+choiceA+"</h4>";
+  test.innerHTML += "<h4><input type='radio' name='choices' value='B'>"+choiceB+"</h4>";
+  test.innerHTML += "<h4><input type='radio' name='choices' value='C'>"+choiceC+"</h4>";
+  test.innerHTML += "<h4><input type='radio' name='choices' value='D'>"+choiceD+"</h4><br>";
+  test.innerHTML += "<button onclick='storeUserAnswers()'>נקסט</button>";
 }
 
+function storeUserAnswers(){
+  choices = document.getElementsByName("choices");
+  for (var i = 0; i < choices.length; i++) {
+    if(choices[i].checked){
+      userAnswers.push(choices[i].value);
+    }
+  }
+  //return userAnswers;
+  position++;
+  renderQuestion();
+}
+
+/*
 function calculateResult(){
 
 }
 
 function showResult(){
-  alert("OK, we will");
+  storeUserAnswers();
+  calculateResult();
 }
-
+*/
 window.addEventListener("load", renderQuestion, false);
-
-}); // /END OF MAIN FUNCTION
