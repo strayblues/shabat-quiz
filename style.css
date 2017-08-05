@@ -6,6 +6,8 @@ body {
   font-family: 'Suez One', serif;
   margin: 0;
   padding: 0;
+  color: #10cc92;
+  color: #dd2581;
 }
 
 #result {
@@ -58,8 +60,8 @@ img {
   color: black;
 }
 
-h2, p {
-  color: black;
+h1, h2, p {
+  color: #3b5998;
 }
 
 h2, p, a {
