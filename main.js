@@ -48,7 +48,7 @@ function renderQuestion(){
   choiceB = questions[position][2];
   choiceC = questions[position][3];
   choiceD = questions[position][4];
-  test.innerHTML = "<h3>"+question+"</h3>";
+  test.innerHTML = "<h3>"+current_question+"</h3>";
   test.innerHTML += "<input type='radio' name='choices' value='A'>"+choiceA+"<br>";
   test.innerHTML += "<input type='radio' name='choices' value='B'>"+choiceB+"<br>";
   test.innerHTML += "<input type='radio' name='choices' value='C'>"+choiceC+"<br>";
