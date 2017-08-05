@@ -1,5 +1,5 @@
 var position=0, test, test_status, current_question, choice, choices,
-    choiceA, choiceB, choiceC, choiceD, userAnswers=[];
+    choiceA, choiceB, choiceC, choiceD, userAnswers=[], clickCount=0;
 var questions = [
   [
     "להערכתך, כמה בלון יקנו לך?",
@@ -48,29 +48,38 @@ function renderQuestion(){
   test.innerHTML += "<h4><input type='radio' name='choices' value='B'>"+choiceB+"</h4>";
   test.innerHTML += "<h4><input type='radio' name='choices' value='C'>"+choiceC+"</h4>";
   test.innerHTML += "<h4><input type='radio' name='choices' value='D'>"+choiceD+"</h4><br>";
-  test.innerHTML += "<button onclick='storeUserAnswers()'>נקסט</button>";
+  test.innerHTML += "<button class='btn btn-play' id='next' onclick='storeUserAnswers()'>נקסט</button>";
 }
 
 function storeUserAnswers(){
+  clickCount++;
   choices = document.getElementsByName("choices");
   for (var i = 0; i < choices.length; i++) {
     if(choices[i].checked){
       userAnswers.push(choices[i].value);
     }
   }
-  //return userAnswers;
-  position++;
-  renderQuestion();
-}
-
-/*
-function calculateResult(){
-
+  // TODO make count stop at 4
+  if (position < choices.length-1){
+    position++;
+    renderQuestion();
+  }
+  if (clickCount === choices.length){
+    _("next").remove();
+    $("#btn-result").show();
+  }
 }
 
 function showResult(){
   storeUserAnswers();
-  calculateResult();
+  if (position === 4) {
+    _("next").remove();
+    calculateResult();
+  }
 }
-*/
+
+function calculateResult(){
+  alert('אתה חתול');
+}
+
 window.addEventListener("load", renderQuestion, false);

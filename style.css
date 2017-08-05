@@ -10,73 +10,9 @@ body {
   color: black;
 }
 
-h4 {
-  background-color: lightgray;
-  padding: 15px;
-  border-radius: 6px;
-  margin: 2px 0;
-  color: black;
-}
-
-#result {
-  background-color: #9acd32;
-  display: none;
-}
-
-.center, .icons, #result {
-  margin: auto;
-  margin-top: 0.5rem;
-  width: 75%;
-  padding: 1.5rem;
-  text-align: center;
-  background-color: white;
-  border-radius: 6px;
-}
-
-h2:nth-child(even) {
-  background-color: #87c4be;
-}
-
-.center-right {
-  text-align: right;
-}
-
-.icons {
-  background-color: white;
-  margin-bottom: 10px;
-}
-
-#test {
-  font-size: 26px;
-  color: white;
-}
-
-#test_status {
-  font-size: 20px;
-}
-
-img {
-  display: block;
-  margin: auto;
-  text-align: center;
-  width: 80%;
-}
-*/
-.contact {
-  margin-top: -1rem;
-}
-
-.fa {
-  margin: 0.5rem;
-  color: black;
-}
-
-.fa:hover {
-  color: #3b5998;
-}
-
 h2 {
   background-color: #d596ac;
+  background-color: #87c4be;
   color: white;
   border-radius: 6px;
   padding: 30px;
@@ -91,6 +27,72 @@ a {
   text-decoration: none;
 }
 
+h4 {
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 2px 0;
+  color: black;
+}
+
+img {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+
+.center, .icons, #result {
+  margin: auto;
+  margin-top: 0.5rem;
+  width: 75%;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.center-right {
+  text-align: right;
+}
+
+.icons {
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+#result {
+  background-color: #9acd32;
+  display: none;
+}
+
+#btn-result {
+  display: none;
+}
+
+#test {
+  font-size: 26px;
+  color: white;
+}
+
+#test_status {
+  font-size: 20px;
+}
+
+
+.contact {
+  margin-top: -1rem;
+}
+
+.fa {
+  margin: 0.5rem;
+  color: black;
+}
+
+.fa:hover {
+  color: #3b5998;
+}
+
 .contact-text {
   color: black;
   font-size: 70%;
@@ -98,11 +100,12 @@ a {
 
 .btn {
   color: black;
+  background-color: #f09247;
 }
 
 .btn-play {
-  border-radius: 6px;
-  font-size: 20pt;
+  border-radius: 3px;
+  font-size: 16pt;
   padding: 10px;
 }
 
