@@ -50,12 +50,13 @@ function renderQuestion(){
   choiceB = questions[question_num][2];
   choiceC = questions[question_num][3];
   choiceD = questions[question_num][4];
+
   test.innerHTML = "<h2>"+current_question+"</h2>";
-  test.innerHTML += "<h4><input type='radio' name='choices' value='A'>"+choiceA+"</h4>";
-  test.innerHTML += "<h4><input type='radio' name='choices' value='B'>"+choiceB+"</h4>";
-  test.innerHTML += "<h4><input type='radio' name='choices' value='C'>"+choiceC+"</h4>";
-  test.innerHTML += "<h4><input type='radio' name='choices' value='D'>"+choiceD+"</h4><br>";
-  test.innerHTML += "<button class='btn btn-play' id='next' onclick='storeUserAnswers()'>נקסט</button>";
+  test.innerHTML += "<label><input type='radio' name='choices' value='A'></input><h4>"+choiceA+"</h4></label>";
+  test.innerHTML += "<label><input type='radio' name='choices' value='B'></input><h4>"+choiceB+"</h4></label>";
+  test.innerHTML += "<label><input type='radio' name='choices' value='C'></input><h4>"+choiceC+"</h4></label>";
+  test.innerHTML += "<label><input type='radio' name='choices' value='D'></input><h4>"+choiceD+"</h4></label><br>";
+  test.innerHTML += "<label><button class='btn btn-play' id='next' onclick='storeUserAnswers()'>נקסט</button>";
 }
 
 function storeUserAnswers(){
