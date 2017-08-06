@@ -1,17 +1,18 @@
 var question_num=0, test, test_status, current_question, choice, choices,
-    choiceA, choiceB, choiceC, choiceD, userAnswers=[];
+    choiceA, choiceB, choiceC, choiceD, userAnswers=[], answerString,
+    occurrencesOfA, occurrencesOfB, occurrencesOfC, occurrencesOfD;
 var questions = [
   [
     "להערכתך, כמה בלון יקנו לך?",
-    "המון",
     "לא המון",
     "אומרים ״כמה בלונים״, לא ״כמה בלון״",
+    "המון",
     "מיאו"
   ],
   [
     "כמה קפה שתית היום?",
-    "המון",
     "לא המון",
+    "המון",
     "לא משנה, העיקר שהניסוח תקין",
     "אני חתול"
   ],
@@ -33,8 +34,8 @@ var questions = [
     "איך שיצאת מהמקלחת ראית ג׳וק ענק בפינה. מה תעשה/י?",
     "אמעך אותו עם עיתון",
     "אשפוך עליו המון קפה רותח",
-    "אשחק איתו עד שימאס לי ואז אוכל אותו",
-    "אהיה סגור/ה"
+    "אהיה סגור/ה",
+    "אשחק איתו עד שימאס לי ואז אוכל אותו"
   ]
 ];
 
@@ -77,15 +78,38 @@ function storeUserAnswers(){
 }
 
 function showResult(){
-//  _("next").remove();
-  alert('את/ה חתול');
-//  if (question_num === questions.length){
-//    calculateResult();
-//  }
+  calculateResult();
+
+  // do some innerHTML work here below to display result
+
 }
-/*
+
 function calculateResult(){
-  alert('את/ה חתול');
+  answerString = userAnswers.join("");
+  occurrencesOfA = answerString.replace(/[^A]/g, "");
+  occurrencesOfB = answerString.replace(/[^B]/g, "");
+  occurrencesOfC = answerString.replace(/[^C]/g, "");
+  occurrencesOfD = answerString.replace(/[^D]/g, "");
+
+  if (occurrencesOfA.length > 2){
+    alert('את/ה האבא');
+  }
+  else if (occurrencesOfB.length > 3){
+    alert('את/ה לורליי גילמור');
+  }
+  else if (occurrencesOfB.length > 2){
+    alert('את/ה האמא');
+  }
+  else if (occurrencesOfC.length > 2){
+    alert('את/ה ׳אני׳');
+  }
+  else if (occurrencesOfD.length > 2){
+    alert('את/ה חתול');
+  }
+  else {
+    alert('את/ה חתול');
+  }
+
 }
-*/
+
 window.addEventListener("load", renderQuestion, false);
