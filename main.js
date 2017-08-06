@@ -20,14 +20,7 @@ var questions = [
     "המון",
     "לא המון",
     "לא אומרים ״כמה״ על עיתון!",
-    "אני חתול"
-  ],
-  [
-    "באים אליך אורחים. כיצד תארח/י אותם?",
-    "אתן להם לקטוף אותי",
-    "אתן להם לשוט עלי בסירה",
-    "הם לא יכולים לבוא, אני סגור/ה",
-    "נשחק מסירות עם בלון"
+    "חתולללל"
   ],
   [
     "הלכת לירקון. מה תעשה/י?",
@@ -66,15 +59,14 @@ function renderQuestion(){
 }
 
 function storeUserAnswers(){
-  question_num++;
   choices = document.getElementsByName("choices");
   for (var i = 0; i < choices.length; i++) {
     if(choices[i].checked){
       userAnswers.push(choices[i].value);
     }
   }
-  // TODO make count stop at 6
-  if (question_num <= questions.length){
+  if (question_num < questions.length-1) {
+    question_num++;
     renderQuestion();
   }
   else {
