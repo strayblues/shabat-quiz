@@ -77,14 +77,14 @@ function storeUserAnswers(){
 
 function showResult(){
 //  _("next").remove();
-  alert('אתה חתול');
+  alert('את/ה חתול');
 //  if (question_num === questions.length){
 //    calculateResult();
 //  }
 }
 /*
 function calculateResult(){
-  alert('אתה חתול');
+  alert('את/ה חתול');
 }
 */
 window.addEventListener("load", renderQuestion, false);
