@@ -45,8 +45,8 @@ img {
 .center, .icons, #result {
   margin: auto;
   margin-top: 0.5rem;
-  width: 75%;
-  padding: 1.5rem;
+  width: 96%;
+  padding: 2px;
   text-align: center;
   background-color: white;
   border-radius: 6px;
@@ -63,22 +63,22 @@ img {
 
 #result {
   background-color: #9acd32;
+  font-size: 20px;
   display: none;
 }
 
-#btn-result {
+#btn-result, #bt-again {
   display: none;
 }
 
 #test {
-  font-size: 26px;
+  font-size: 18px;
   color: white;
 }
 
 #test_status {
-  font-size: 20px;
+  font-size: 18px;
 }
-
 
 .contact {
   margin-top: -1rem;
@@ -105,8 +105,8 @@ img {
 
 .btn-play {
   border-radius: 3px;
-  font-size: 16pt;
-  padding: 10px;
+  font-size: 12pt;
+  padding: 8px;
 }
 
 .btn-play:hover {
@@ -126,13 +126,29 @@ input:checked ~ h4{
   background-color: #e8aecd;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
   body {
     background-color: lightblue;
   }
   .center, .icons, #result {
     width: 60%;
+    padding: 2.5rem;
   }
+
+  #test {
+    font-size: 26px;
+  }
+
+  #test_status {
+    font-size: 20px;
+  }
+
+  .btn-play {
+    border-radius: 3px;
+    font-size: 16pt;
+    padding: 10px;
+  }
+
   img {
     width: 100%;
   }

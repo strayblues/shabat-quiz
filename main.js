@@ -1,6 +1,7 @@
 var question_num=0, test, test_status, current_question, choice, choices,
     choiceA, choiceB, choiceC, choiceD, userAnswers=[], answerString,
-    occurrencesOfA, occurrencesOfB, occurrencesOfC, occurrencesOfD;
+    occurrencesOfA, occurrencesOfB, occurrencesOfC, occurrencesOfD,
+    result;
 var questions = [
   [
     "להערכתך, כמה בלון יקנו לך?",
@@ -79,8 +80,12 @@ function storeUserAnswers(){
 
 function showResult(){
   calculateResult();
+  // Show calculated score and Try Again button
+  $("#result").html("את/ה... "+result+"!");
+  $("#btn-result").hide();
+  $("#result").show();
+  $("#bt-again").show();
 
-  // do some innerHTML work here below to display result
 
 }
 
@@ -92,24 +97,20 @@ function calculateResult(){
   occurrencesOfD = answerString.replace(/[^D]/g, "");
 
   if (occurrencesOfA.length > 2){
-    alert('את/ה האבא');
+    result = "האבא";
   }
   else if (occurrencesOfB.length > 3){
-    alert('את/ה לורליי גילמור');
+    result = "לורליי גילמור";
   }
   else if (occurrencesOfB.length > 2){
-    alert('את/ה האמא');
+    result = "האימא";
   }
   else if (occurrencesOfC.length > 2){
-    alert('את/ה ׳אני׳');
-  }
-  else if (occurrencesOfD.length > 2){
-    alert('את/ה חתול');
+    result = "׳אני׳";
   }
   else {
-    alert('את/ה חתול');
+    result = "חתול";
   }
-
 }
 
 window.addEventListener("load", renderQuestion, false);
