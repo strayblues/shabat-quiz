@@ -63,11 +63,10 @@ img {
 
 #result {
   background-color: #9acd32;
-  font-size: 20px;
-  display: none;
+  font-size: 60px;
 }
 
-#btn-result, #bt-again {
+#btn-result {
   display: none;
 }
 
@@ -82,6 +81,10 @@ img {
 
 .contact {
   margin-top: -1rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .fa {
@@ -107,6 +110,20 @@ img {
   border-radius: 3px;
   font-size: 12pt;
   padding: 8px;
+}
+
+.btn-fb {
+  background-color: #3b5998;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.btn-fb:hover {
+  background-color: #dd2581 !important;
+}
+
+.again {
+  margin-bottom: -40px;
 }
 
 .btn-play:hover {

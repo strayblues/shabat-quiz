@@ -81,12 +81,9 @@ function storeUserAnswers(){
 function showResult(){
   calculateResult();
   // Show calculated score and Try Again button
+  $(".main").hide();
+  $(".hidden").show();
   $("#result").html("את/ה... "+result+"!");
-  $("#btn-result").hide();
-  $("#result").show();
-  $("#bt-again").show();
-
-
 }
 
 function calculateResult(){
@@ -103,9 +100,18 @@ function calculateResult(){
     result = "לורליי גילמור";
   }
   else if (occurrencesOfB.length > 2){
-    result = "האימא";
+    result = "האמא";
   }
   else if (occurrencesOfC.length > 2){
+    result = "׳אני׳";
+  }
+  else if (occurrencesOfD.length > 2){
+    result = "חתול";
+  }
+  else if (occurrencesOfB.length > 1){
+    result = "האמא";
+  }
+  else if (occurrencesOfC.length > 1){
     result = "׳אני׳";
   }
   else {
